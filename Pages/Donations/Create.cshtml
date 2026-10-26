@@ -1,0 +1,20 @@
+@page
+@model CreateModel
+@{
+    ViewData["Title"] = "Donate";
+}
+<section class="section"><div class="container">
+<div class="card p-5 form-card">
+<span class="badge badge-soft rounded-pill px-3 py-2">Donation</span>
+<h1 class="fw-bold mt-3">Make a difference</h1>
+<p class="text-secondary">Values are symbolic at prototype stage.</p>
+<form method="post" class="mt-4">
+<div class="mb-3"><label asp-for="Input.Name" class="form-label">Donor name</label><input asp-for="Input.Name" class="form-control" placeholder="Leave blank for anonymous" /></div>
+<div class="mb-3"><label asp-for="Input.Amount" class="form-label">Amount</label><input asp-for="Input.Amount" class="form-control" type="number" min="1" step="0.01" /></div>
+<div class="row g-3">
+<div class="col-sm-6"><label asp-for="Input.Currency" class="form-label">Currency</label><select asp-for="Input.Currency" class="form-select"><option>ZAR</option><option>USD</option><option>EUR</option></select></div>
+<div class="col-sm-6"><label asp-for="Input.Type" class="form-label">Donation type</label><select asp-for="Input.Type" class="form-select"><option>One-time</option><option>Recurring</option></select></div>
+</div>
+<button class="btn btn-success btn-lg w-100 mt-4">Record donation</button>
+</form>
+</div></div></section>

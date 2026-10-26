@@ -1,0 +1,27 @@
+@page "{id:int}"
+@model GiftOfTheGiversPrototype.Pages.Donations.SuccessModel
+
+<div class="container mt-4">
+    <h2>Donation Successful!</h2>
+    <p>Thank you, <strong>@Model.Donation?.DonorName</strong>, for your generous contribution of <strong>@Model.Donation?.Amount @Model.Donation?.Currency</strong>.</p>
+
+    @if (Model.Certificate != null)
+    {
+        <div class="card border-success mt-4 p-3 shadow-sm">
+            <h4 class="text-success">Official Section 18A Tax Certificate</h4>
+            <p><strong>Organization:</strong> @Model.Certificate.Organization</p>
+            <p><strong>Certificate Number:</strong> @Model.Certificate.CertificateNumber</p>
+            <p><strong>Issued To:</strong> @Model.Certificate.DonorName</p>
+            <p><strong>Amount:</strong> R @Model.Certificate.DonationAmount</p>
+        </div>
+    }
+
+    <div class="mt-4 d-flex flex-column flex-md-row gap-3">
+        <a href="/certificate/@Model.Donation?.Id" class="btn btn-success btn-lg w-100 w-md-auto">
+            Print Tax Certificate
+        </a>
+        <a asp-page="/Index" class="btn btn-outline-secondary btn-lg w-100 w-md-auto">
+            Back home
+        </a>
+    </div>
+</div>

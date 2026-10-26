@@ -1,0 +1,37 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+<section class="hero">
+<div class="container">
+<div class="row align-items-center g-5">
+<div class="col-lg-7">
+<span class="badge badge-soft rounded-pill px-3 py-2 mb-3">Humanitarian relief • South Africa</span>
+<h1>Giving hope where it matters most.</h1>
+<p class="mt-4">A simple prototype for supporting relief projects, making donations and registering volunteers.</p>
+<div class="d-flex flex-wrap gap-2 mt-4">
+<a class="btn btn-success btn-lg px-4" asp-page="/Donations/Create">Donate now</a>
+<a class="btn btn-outline-dark btn-lg px-4" asp-page="/Volunteer/Register">Become a volunteer</a>
+</div>
+</div>
+<div class="col-lg-5">
+<div class="card p-4">
+<div class="icon-box mb-3">❤</div>
+<h3>Current relief focus</h3>
+<p class="text-secondary">Food, essential supplies and community support for people affected by hardship.</p>
+<a asp-page="/About" class="text-success fw-semibold text-decoration-none">Learn more →</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<div class="row g-4">
+<div class="col-md-4"><div class="card p-4 h-100"><div class="icon-box mb-3">01</div><h4>Donate</h4><p class="text-secondary">Choose one-time or recurring support and a symbolic currency amount.</p></div></div>
+<div class="col-md-4"><div class="card p-4 h-100"><div class="icon-box mb-3">02</div><h4>Volunteer</h4><p class="text-secondary">Share your skills and availability so relief teams can identify potential volunteers.</p></div></div>
+<div class="col-md-4"><div class="card p-4 h-100"><div class="icon-box mb-3">03</div><h4>Stay informed</h4><p class="text-secondary">Employees can publish simple updates about ongoing relief projects.</p></div></div>
+</div>
+</div>
+</section>

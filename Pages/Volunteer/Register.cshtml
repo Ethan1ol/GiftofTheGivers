@@ -1,0 +1,17 @@
+@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Volunteer";
+}
+<section class="section"><div class="container"><div class="card p-5 form-card">
+<span class="badge badge-soft rounded-pill px-3 py-2">Volunteer</span>
+<h1 class="fw-bold mt-3">Register your interest</h1>
+<p class="text-secondary">Tell us about your skills and availability.</p>
+<form method="post" class="mt-4">
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="mb-3"><label asp-for="Input.Name" class="form-label">Name</label><input asp-for="Input.Name" class="form-control" /></div>
+<div class="mb-3"><label asp-for="Input.Skills" class="form-label">Skills</label><input asp-for="Input.Skills" class="form-control" placeholder="e.g. Logistics, nursing, driving" /></div>
+<div class="mb-3"><label asp-for="Input.Availability" class="form-label">Availability</label><select asp-for="Input.Availability" class="form-select"><option>Weekdays</option><option>Weekends</option><option>Evenings</option><option>Flexible</option></select></div>
+<button class="btn btn-success w-100">Submit interest</button>
+</form>
+</div></div></section>

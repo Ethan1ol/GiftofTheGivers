@@ -1,0 +1,15 @@
+@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+<section class="section"><div class="container"><div class="card p-5 form-card">
+<h1 class="fw-bold">Sign in</h1><p class="text-secondary">Access your donor or employee prototype account.</p>
+<form method="post" class="mt-4">
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="mb-3"><label asp-for="Input.Email" class="form-label"></label><input asp-for="Input.Email" class="form-control" placeholder="you@example.com" /></div>
+<div class="mb-3"><label asp-for="Input.Password" class="form-label"></label><input asp-for="Input.Password" class="form-control" /></div>
+<button class="btn btn-success w-100">Login</button>
+</form>
+<div class="alert alert-light mt-4 mb-0"><strong>Employee demo:</strong> employee@givers.org / Password1</div>
+</div></div></section>

@@ -1,0 +1,19 @@
+@page
+@model DashboardModel
+@attribute [Microsoft.AspNetCore.Authorization.Authorize(Roles = "Employee")]
+@{
+    ViewData["Title"] = "Employee Dashboard";
+}
+<section class="section"><div class="container">
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4"><div><span class="badge badge-soft rounded-pill px-3 py-2">Employee only</span><h1 class="fw-bold mt-2">Relief Dashboard</h1></div></div>
+<div class="row g-3 mb-4">
+<div class="col-md-4"><div class="card p-4"><div class="text-secondary">Donations</div><div class="stat">@Model.Store.Donations.Count</div></div></div>
+<div class="col-md-4"><div class="card p-4"><div class="text-secondary">Volunteer sign-ups</div><div class="stat">@Model.Store.Volunteers.Count</div></div></div>
+<div class="col-md-4"><div class="card p-4"><div class="text-secondary">Relief updates</div><div class="stat">@Model.Store.Updates.Count</div></div></div>
+</div>
+<div class="row g-4">
+<div class="col-lg-7"><div class="card p-4"><h3>Post an ongoing relief update</h3><form method="post" class="mt-3"><input asp-for="Title" class="form-control mb-3" placeholder="Update title" /><textarea asp-for="Message" class="form-control mb-3" rows="4" placeholder="What is happening?"></textarea><button class="btn btn-dark">Post update</button></form></div></div>
+<div class="col-lg-5"><div class="card p-4"><h3>Volunteer sign-ups</h3>@if(Model.Store.Volunteers.Count == 0){<p class="text-secondary">No volunteer submissions yet.</p>} else { @foreach(var v in Model.Store.Volunteers.TakeLast(5).Reverse()){<div class="border-bottom py-2"><strong>@v.Name</strong><div class="small text-secondary">@v.Skills · @v.Availability</div></div>}}</div></div>
+</div>
+<div class="card p-4 mt-4"><h3>Recent relief updates</h3>@foreach(var u in Model.Store.Updates.OrderByDescending(x=>x.CreatedAt)){<div class="border-bottom py-3"><strong>@u.Title</strong><div class="text-secondary">@u.Message</div><small class="text-secondary">@u.CreatedAt.ToString("dd MMM yyyy HH:mm")</small></div>}</div>
+</div></section>

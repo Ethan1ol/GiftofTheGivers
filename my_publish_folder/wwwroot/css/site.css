@@ -1,0 +1,131 @@
+:root {
+    --primary-orange: #f97316;
+    --primary-orange-hover: #ea580c;
+    --primary-orange-active: #c2410c;
+    --orange-light: #ffedd5;
+    --orange-border: #fed7aa;
+}
+
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+body {
+    margin-bottom: 60px;
+    color: #212529;
+    background-color: #f8fafc;
+}
+
+/* Links */
+a {
+    color: var(--primary-orange);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--primary-orange-hover);
+    text-decoration: underline;
+}
+
+/* Primary Buttons */
+.btn-primary {
+    background-color: var(--primary-orange) !important;
+    border-color: var(--primary-orange) !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-orange-hover) !important;
+    border-color: var(--primary-orange-hover) !important;
+    color: #ffffff !important;
+}
+
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active {
+    background-color: var(--primary-orange-active) !important;
+    border-color: var(--primary-orange-active) !important;
+    box-shadow: 0 0 0 0.25rem rgba(249, 115, 22, 0.4) !important;
+}
+
+/* Outline Buttons */
+.btn-outline-primary {
+    color: var(--primary-orange) !important;
+    border-color: var(--primary-orange) !important;
+    background-color: transparent !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--primary-orange) !important;
+    border-color: var(--primary-orange) !important;
+    color: #ffffff !important;
+}
+
+.btn-outline-primary:focus,
+.btn-outline-primary:active {
+    box-shadow: 0 0 0 0.25rem rgba(249, 115, 22, 0.4) !important;
+}
+
+/* Form Inputs Focus */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--primary-orange) !important;
+    box-shadow: 0 0 0 0.25rem rgba(249, 115, 22, 0.25) !important;
+}
+
+/* Checkboxes & Radios */
+.form-check-input:checked {
+    background-color: var(--primary-orange) !important;
+    border-color: var(--primary-orange) !important;
+}
+
+/* Navbar & Active Links */
+.navbar-brand {
+    color: var(--primary-orange) !important;
+    font-weight: bold;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background-color: var(--primary-orange) !important;
+}
+
+/* Badges & Highlights */
+.badge-orange,
+.bg-orange {
+    background-color: var(--primary-orange) !important;
+    color: #ffffff !important;
+}
+
+.bg-orange-subtle {
+    background-color: var(--orange-light) !important;
+    border: 1px solid var(--orange-border);
+}
+
+/* Custom Cards / Accent Borders */
+.border-primary {
+    border-color: var(--primary-orange) !important;
+}
+
+.text-primary {
+    color: var(--primary-orange) !important;
+}
+
+/* Sticky Footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    background-color: #ffffff;
+    border-top: 1px solid #e2e8f0;
+}
