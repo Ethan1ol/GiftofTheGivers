@@ -1,7 +1,8 @@
 
 # Gift of the Givers Foundation - Prototype Web Application
 
-Moving Source code from Azure DevOps Repository to Github
+Moving Source code from Azure DevOps Repository to Github.
+
 An enterprise-style web prototype developed in C# using **ASP.NET Core MVC** and connected to SQL Server, designed to support disaster relief coordination, volunteer management, and transparent donation processing. 
 
 This project was built as part of an advanced full-stack software development module to demonstrate clean architecture, robust backend logic, and modern cloud deployment pipelines using **Azure DevOps**.
