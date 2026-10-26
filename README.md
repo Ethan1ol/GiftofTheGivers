@@ -1,31 +1,36 @@
-# Gift of the Givers – ASP.NET Core Prototype
+Gift of the Givers Foundation - Prototype Web Application
+An enterprise-style web prototype developed in C# using ASP.NET Core MVC and connected to SQL Server, designed to support disaster relief coordination, volunteer management, and transparent donation processing.
 
-## Requirements covered
-- Gift of the Givers branding/logo and header
-- Responsive Bootstrap navigation: Home, About, Donate, Volunteer, Contact
-- ASP.NET Core 8 Razor Pages
-- ASP.NET Core Identity with Employee and Donor roles
-- Employee login and protected employee dashboard
-- Donor login support
-- Anonymous donation option
-- One-time or recurring donations
-- ZAR, USD and EUR symbolic currencies
-- Placeholder tax certificate after every donation, printable / saveable as PDF
-- Volunteer form: name, skills and availability
-- Volunteer submissions stored in memory
-- Employee can post ongoing relief-project updates
-- Employee can view volunteer sign-ups and donation counts
-- Prototype intentionally uses in-memory data for donation/volunteer/update records
+This project was built as part of an advanced full-stack software development module to demonstrate clean architecture, robust backend logic, and modern cloud deployment pipelines using Azure DevOps.
 
-## Run
-1. Install .NET 8 SDK.
-2. Open a terminal in this folder.
-3. Run `dotnet restore`.
-4. Run `dotnet run`.
-5. Open the HTTPS URL shown by .NET.
+🚀 Key Features:
+Disaster Relief Tracking: Manage ongoing relief efforts, allocate resources, and log real-time updates.
 
-### Demo employee account
-Email: employee@givers.org
-Password: Password1
+Donation & Tax Certificate Workflow: Secure processing of financial and physical donations with automated tax certificate generation.
 
-The Identity database uses EF Core InMemory, so prototype account data is reset when the application restarts.
+Volunteer & Employee Portals: Role-based dashboards for tracking volunteers, staff shifts, and operational task assignments.
+
+Azure Serverless Functions: Integrated background worker functions for automated task logging and storage synchronization.
+
+🛠️ Technology Stack & Architecture:
+Backend: C#, ASP.NET Core MVC, .NET 8, Entity Framework Core
+
+Database: Microsoft SQL Server (Relational Database Design)
+
+Cloud & DevOps:
+
+Azure App Services: Cloud hosting and deployment
+
+Azure DevOps: Automated CI/CD YAML pipelines for continuous build and release
+
+Azure Blob Storage: Secure media and document management
+
+Tooling & Helpers: Custom NuGet package helper library integration, Git feature-branch workflows
+🔄 CI/CD Pipeline & Deployment
+The project utilizes Azure DevOps YAML pipelines configured for:
+
+Automatic code compilation and dependency restoration.
+
+Automated unit testing and build verification on every pull request.
+
+Seamless continuous deployment directly to Azure App Services.
